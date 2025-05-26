@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Biblioteca Mea{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <h2>Autentificare</h2>
+    <form method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Parolă:</label><br>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Autentificare</button>
+    </form>
+    <div class="auth-links">
+        <span>Nu ai cont? <a href="{{ url_for('app_routes.signup') }}">Înregistrează-te</a></span>
+    </div>
+</div>
+{% endblock %}

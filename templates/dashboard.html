@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biblioteca mea - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Biblioteca mea</h2>
+        <a href="{{ url_for('app_routes.add_book') }}" class="add-book-btn">+ Adaugă Carte Nouă</a>
+        
+        <ul class="book-list">
+        {% for book in books %}
+            <li>
+                <div class="book-info">
+                    <strong>{{ book.title }}</strong> <br>
+                    <span class="book-meta">{{ book.author }} - {{ book.genre or 'Gen necunoscut' }} - {{ book.status }}</span>
+                </div>
+                <div class="book-actions">
+                    <a href="{{ url_for('app_routes.delete_book', id=book.id) }}" onclick="return confirm('Ștergi această carte?');">Șterge</a>
+                </div>
+            </li>
+        {% else %}
+            <p>Nu ai cărți adăugate încă.</p>
+        {% endfor %}
+        </ul>
+        
+    </div>
+    <div style="display: flex; justify-content: flex-end; gap: 15px; margin-bottom: 20px;">
+        <a href="{{ url_for('app_routes.profile') }}" class="add-book-btn" style="background-color:#27242f;">Profil</a>
+        <a href="{{ url_for('app_routes.logout') }}" class="add-book-btn" style="background-color:#771a15;">Logout</a>
+
+    </div>
+
+</body>
+</html>

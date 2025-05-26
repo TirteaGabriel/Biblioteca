@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Adaugă Carte - Biblioteca Mea{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h2>Adaugă o carte nouă</h2>
+    <form method="POST">
+        <label for="title">Titlu:</label><br>
+        <input type="text" id="title" name="title" placeholder="Ex: Mândrie și Prejudecată" required><br><br>
+
+        <label for="author">Autor:</label><br>
+        <input type="text" id="author" name="author" placeholder="Ex: Jane Austen" required><br><br>
+
+        <label for="genre">Gen:</label><br>
+        <input type="text" id="genre" name="genre" placeholder="Ex: Roman clasic"><br><br>
+
+        <label for="status">Stare:</label><br>
+        <select id="status" name="status" required>
+            <option value="">-- Selectează --</option>
+            <option value="citită">Citită</option>
+            <option value="necitită">Necitită</option>
+            <option value="în curs">În curs</option>
+        </select><br><br>
+
+        <button type="submit" class="add-book-btn">Adaugă carte</button>
+    </form>
+
+    <p><a href="{{ url_for('app_routes.dashboard') }}">Înapoi la bibliotecă</a></p>
+</div>
+{% endblock %}

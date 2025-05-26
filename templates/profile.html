@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Profil - Biblioteca Mea{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h2>Profilul meu</h2>
+    <form method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" value="{{ user.username }}" required><br><br>
+
+        <label for="password">Parolă nouă (lasă gol dacă nu vrei să schimbi):</label><br>
+        <input type="password" id="password" name="password" placeholder="Parolă nouă"><br><br>
+
+        <button type="submit" class="add-book-btn">Salvează modificările</button>
+    </form>
+
+    <p><a href="{{ url_for('app_routes.dashboard') }}">Înapoi la bibliotecă</a></p>
+</div>
+{% endblock %}

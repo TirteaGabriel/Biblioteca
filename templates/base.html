@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Biblioteca Mea{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <header style="background-color:#fa402b; padding: 15px 30px; color: white;">
+        <h1 style="margin: 0; font-weight: 700; font-size: 1.8rem;">
+            Biblioteca Mea
+        </h1>
+    </header>
+
+    <main style="padding: 20px; min-height: 80vh;">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer style="background-color:#27242f; color: #e2e6e0; text-align: center; padding: 15px 10px; font-size: 0.9rem;">
+        &copy; 2025 Biblioteca Mea. Toate drepturile rezervate.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log('Bookshelf app JS loaded');

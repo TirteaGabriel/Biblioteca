@@ -1,0 +1,183 @@
+/* Reset simplu */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+body {
+    padding: 20px;
+}
+
+/* Container dashboard */
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Titlu */
+h2 {
+    margin-bottom: 20px;
+    color: #27242f;
+}
+
+/* Lista cărți */
+.book-list {
+    list-style: none;
+}
+
+.book-list li {
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #fa402b;
+    background-color: #fefefe;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-info {
+    max-width: 75%;
+}
+
+.book-info strong {
+    font-size: 1.1em;
+    color: #771a15;
+}
+
+.book-meta {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 4px;
+}
+
+.book-actions a {
+    color: #fa402b;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: color 0.2s ease;
+}
+
+.book-actions a:hover {
+    color: #771a15;
+}
+
+/* Buton adaugă carte */
+.add-book-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #fa402b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.add-book-btn:hover {
+    background-color: #771a15;
+}
+
+/* Link logout */
+.logout-link {
+    display: block;
+    margin-top: 25px;
+    color: #fa402b;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: right;
+}
+
+.logout-link:hover {
+    color: #771a15;
+}
+
+/* Container comun pentru formulare */
+.auth-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Titlu pagină */
+.auth-container h2 {
+    margin-bottom: 25px;
+    color: #27242f;
+    text-align: center;
+}
+
+/* Etichete input */
+.auth-container label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Inputuri text si parola */
+.auth-container input[type="text"],
+.auth-container input[type="password"],
+.auth-container input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0 18px 0;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.auth-container input[type="text"]:focus,
+.auth-container input[type="password"]:focus,
+.auth-container input[type="email"]:focus {
+    border-color: #fa402b;
+    outline: none;
+}
+
+/* Buton submit */
+.auth-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #fa402b;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-container button[type="submit"]:hover {
+    background-color: #771a15;
+}
+
+/* Link-uri în josul formularului */
+.auth-container .auth-links {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.auth-container .auth-links a {
+    color: #fa402b;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 6px;
+    transition: color 0.3s ease;
+}
+
+.auth-container .auth-links a:hover {
+    color: #771a15;
+}
